@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #111827;
+  color: #f8fbff;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+.home-page {
+  padding: 0;
+}
+
+.home-box {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+.top-tabs {
+  width: 100%;
+  background-color: #3a3ea1;
+  border-radius: 0;
+  padding: 24px 32px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 34px;
+  flex-wrap: wrap;
+}
+
+.top-tabs a {
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.top-tabs a:hover {
+  opacity: 0.82;
+}
+
+.top-tabs a.active {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+
+.page-header {
+  padding: 0;
+  background-color: #3a3ea1;
+}
+
+.page-shell {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+.page-main {
+  padding: 52px 20px 50px;
+  background: #111827;
+}
+
+.content-panel {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #1b2540;
+  border: 1px solid #2b3658;
+  border-radius: 16px;
+  padding: 38px 36px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+}
+
+.content-panel h2 {
+  color: #f8fbff;
+  font-size: 2.7rem;
+  margin-bottom: 16px;
+}
+
+.page-intro,
+.about-copy {
+  color: #dbe7ff;
+  font-size: 1.12rem;
+  line-height: 1.7;
+}
+
+.about-copy + .about-copy {
+  margin-top: 14px;
+}
+
+.item-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.item-card {
+  display: block;
+  background: #3a3ea1;
+  border: none;
+  border-radius: 12px;
+  padding: 22px 24px;
+  transition: transform 0.18s ease, background 0.18s ease;
+}
+
+.item-title {
+  display: block;
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.item-subtitle {
+  display: block;
+  color: #dbe7ff;
+  font-size: 1.02rem;
+}
+
+.link-card:hover {
+  background: #2f338a;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 700px) {
+  .top-tabs {
+    gap: 20px;
+    padding: 20px 18px;
+  }
+
+  .top-tabs a {
+    font-size: 1.02rem;
+  }
+
+  .page-main {
+    padding: 28px 14px 30px;
+  }
+
+  .content-panel {
+    padding: 24px 18px;
+    border-radius: 12px;
+  }
+
+  .content-panel h2 {
+    font-size: 2rem;
+  }
+
+  .item-title {
+    font-size: 1.2rem;
+  }
+
+  .item-card {
+    padding: 18px 18px;
+  }
+}
