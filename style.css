@@ -66,18 +66,45 @@ a {
 }
 
 .page-main {
+  position: relative;
+  min-height: calc(100vh - 82px);
   padding: 52px 20px 50px;
-  background: #111827;
+  overflow: hidden;
+}
+
+.page-main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("RadioNight.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.38;
+  filter: saturate(0.95) brightness(0.72);
+  z-index: 0;
+}
+
+.page-main::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(17, 24, 39, 0.45), rgba(17, 24, 39, 0.72)),
+    radial-gradient(circle at center, rgba(255, 215, 130, 0.08), transparent 55%);
+  z-index: 1;
 }
 
 .content-panel {
+  position: relative;
+  z-index: 2;
   max-width: 1100px;
   margin: 0 auto;
-  background: #1b2540;
-  border: 1px solid #2b3658;
+  background: rgba(27, 37, 64, 0.88);
+  border: 1px solid rgba(219, 231, 255, 0.12);
   border-radius: 16px;
   padding: 38px 36px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(6px);
 }
 
 .content-panel h2 {
@@ -106,7 +133,7 @@ a {
 
 .item-card {
   display: block;
-  background: #3a3ea1;
+  background: rgba(58, 62, 161, 0.9);
   border: none;
   border-radius: 12px;
   padding: 22px 24px;
@@ -128,7 +155,7 @@ a {
 }
 
 .link-card:hover {
-  background: #2f338a;
+  background: rgba(47, 51, 138, 0.94);
   transform: translateY(-2px);
 }
 
@@ -202,6 +229,7 @@ a {
 
   .page-main {
     padding: 28px 14px 30px;
+    min-height: calc(100vh - 118px);
   }
 
   .content-panel {
