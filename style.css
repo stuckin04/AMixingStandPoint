@@ -34,6 +34,8 @@ a {
   justify-content: flex-start;
   gap: 34px;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 5;
 }
 
 .top-tabs a {
@@ -130,6 +132,64 @@ a {
   transform: translateY(-2px);
 }
 
+/* Landing page */
+
+.landing-page {
+  background: #111827;
+}
+
+.landing-hero {
+  position: relative;
+  min-height: calc(100vh - 82px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.landing-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("RadioNight.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.38;
+  filter: saturate(0.95) brightness(0.72);
+}
+
+.landing-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(17, 24, 39, 0.45), rgba(17, 24, 39, 0.72)),
+    radial-gradient(circle at center, rgba(255, 215, 130, 0.08), transparent 55%);
+}
+
+.landing-center {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.landing-center h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.92);
+  letter-spacing: 1px;
+  text-shadow: 0 4px 28px rgba(0, 0, 0, 0.45);
+  margin-bottom: 14px;
+}
+
+.landing-center p {
+  font-size: 1.15rem;
+  color: rgba(235, 242, 255, 0.82);
+  max-width: 760px;
+  margin: 0 auto;
+  line-height: 1.7;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
+}
+
 @media (max-width: 700px) {
   .top-tabs {
     gap: 20px;
@@ -159,5 +219,17 @@ a {
 
   .item-card {
     padding: 18px 18px;
+  }
+
+  .landing-hero {
+    min-height: calc(100vh - 118px);
+  }
+
+  .landing-center h1 {
+    font-size: clamp(2.4rem, 10vw, 4rem);
+  }
+
+  .landing-center p {
+    font-size: 1rem;
   }
 }
