@@ -57,6 +57,8 @@ a {
 .page-header {
   padding: 0;
   background-color: #3a3ea1;
+  position: relative;
+  z-index: 10;
 }
 
 .page-shell {
@@ -69,7 +71,7 @@ a {
   position: relative;
   min-height: calc(100vh - 82px);
   padding: 52px 20px 50px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .page-main::before {
@@ -79,6 +81,7 @@ a {
   background-image: url("RadioNight.png");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   opacity: 0.38;
   filter: saturate(0.95) brightness(0.72);
   z-index: 0;
@@ -92,6 +95,37 @@ a {
     linear-gradient(to bottom, rgba(17, 24, 39, 0.45), rgba(17, 24, 39, 0.72)),
     radial-gradient(circle at center, rgba(255, 215, 130, 0.08), transparent 55%);
   z-index: 1;
+}
+
+.page-main.collection-page::before {
+  content: "";
+  position: fixed;
+  top: 82px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 82px);
+  background-image: url("cumulus_int_genericstudio9_1000.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.34;
+  filter: saturate(0.82) brightness(0.62);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.page-main.collection-page::after {
+  content: "";
+  position: fixed;
+  top: 82px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 82px);
+  background:
+    linear-gradient(to bottom, rgba(10, 16, 28, 0.58), rgba(10, 16, 28, 0.78)),
+    radial-gradient(circle at center, rgba(255, 210, 140, 0.08), transparent 58%);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .content-panel {
@@ -159,7 +193,75 @@ a {
   transform: translateY(-2px);
 }
 
-/* Landing page */
+.dropdown-card {
+  width: 100%;
+}
+
+.dropdown-toggle {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  background: #3148b8;
+  color: #ffffff;
+  padding: 22px 26px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.18s ease;
+}
+
+.dropdown-toggle:hover {
+  background: #2d43ad;
+  transform: translateY(-2px);
+}
+
+.dropdown-arrow {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition:
+    max-height 0.38s ease,
+    opacity 0.25s ease,
+    margin-top 0.25s ease;
+  margin-top: 0;
+}
+
+.dropdown-content.open {
+  opacity: 1;
+  margin-top: 14px;
+}
+
+.dropdown-inner {
+  background: rgba(20, 28, 52, 0.9);
+  border: 1px solid rgba(219, 231, 255, 0.12);
+  border-radius: 12px;
+  padding: 18px 20px;
+}
+
+.archive-list {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.archive-list li {
+  color: #e8f0ff;
+  font-size: 1.08rem;
+  line-height: 1.5;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: rgba(49, 72, 184, 0.22);
+}
 
 .landing-page {
   background: #111827;
@@ -180,6 +282,7 @@ a {
   background-image: url("RadioNight.png");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   opacity: 0.38;
   filter: saturate(0.95) brightness(0.72);
 }
@@ -232,6 +335,12 @@ a {
     min-height: calc(100vh - 118px);
   }
 
+  .page-main.collection-page::before,
+  .page-main.collection-page::after {
+    top: 118px;
+    height: calc(100vh - 118px);
+  }
+
   .content-panel {
     padding: 24px 18px;
     border-radius: 12px;
@@ -247,6 +356,15 @@ a {
 
   .item-card {
     padding: 18px 18px;
+  }
+
+  .dropdown-toggle {
+    font-size: 1.2rem;
+    padding: 18px 18px;
+  }
+
+  .archive-list li {
+    font-size: 1rem;
   }
 
   .landing-hero {
