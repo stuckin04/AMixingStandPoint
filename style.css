@@ -4,15 +4,28 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: #111827;
   color: #f8fbff;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
   text-decoration: none;
+}
+
+.home-title-wrap h1 {
+  font-size: clamp(2.5rem, 4.6vw, 4.8rem);
+  line-height: 1.05;
+  margin-bottom: 12px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
 }
 
 .home-page {
@@ -74,12 +87,17 @@ a {
 
 .page-main {
   position: relative;
-  min-height: auto;
+  flex: 1;
   padding: 52px 20px 8px;
   overflow: visible;
 }
 
 .home-strip {
+  position: relative;
+  z-index: 2;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding-top: 40px;
   padding-bottom: 0;
 }
 
@@ -113,7 +131,7 @@ a {
   left: 0;
   width: 100%;
   height: calc(100vh - 82px);
-  background-image: url("cumulus_int_genericstudio9_1000.jpg");
+  background-image: url("RadioNight.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -144,7 +162,7 @@ a {
   left: 0;
   width: 100%;
   height: calc(100vh - 82px);
-  background-image: url("YouTube Banner.png");
+  background-image: url("RadioNight.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -175,7 +193,7 @@ a {
   left: 0;
   width: 100%;
   height: calc(100vh - 82px);
-  background-image: url("spacetower.jpg");
+  background-image: url("RadioNight.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -415,6 +433,7 @@ a {
   width: 100%;
   padding: 22px 20px 44px;
   text-align: center;
+  margin-top: auto;
 }
 
 .site-footer p {
@@ -450,6 +469,10 @@ a {
   .page-main.contact-page::after {
     top: 118px;
     height: calc(100vh - 118px);
+  }
+
+  .home-strip {
+    padding-top: 20px;
   }
 
   .content-panel {
