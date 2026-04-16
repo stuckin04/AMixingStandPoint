@@ -8,15 +8,15 @@
   <style>
     .home-stage {
       min-height: calc(100vh - 90px);
-      padding: 70px 32px 90px;
+      padding: 60px 32px 90px;
       position: relative;
       z-index: 2;
     }
 
     .home-title-wrap {
       text-align: center;
-      margin-top: 120px;
-      margin-bottom: 34px;
+      margin-top: 10px;
+      margin-bottom: 48px;
       position: relative;
       z-index: 3;
     }
@@ -33,34 +33,14 @@
     }
 
     .featured-videos {
-      max-width: 1500px;
+      max-width: 1600px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-areas:
-        ". top ."
-        "left center right"
-        ". bottom .";
-      gap: 34px 42px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
       align-items: start;
       position: relative;
       z-index: 3;
-    }
-
-    .video-slot-top {
-      grid-area: top;
-    }
-
-    .video-slot-left {
-      grid-area: left;
-    }
-
-    .video-slot-center {
-      grid-area: center;
-    }
-
-    .video-slot-right {
-      grid-area: right;
     }
 
     .video-card {
@@ -76,6 +56,7 @@
       transition: transform 0.18s ease, box-shadow 0.18s ease;
       position: relative;
       z-index: 4;
+      height: 100%;
     }
 
     .video-card:hover {
@@ -85,11 +66,12 @@
 
     .video-title {
       display: block;
-      font-size: 1.08rem;
+      font-size: 1rem;
       font-weight: 700;
       color: #f8fbff;
       margin-bottom: 14px;
       line-height: 1.35;
+      min-height: 54px;
     }
 
     .video-thumb {
@@ -100,38 +82,29 @@
       display: block;
     }
 
-    @media (max-width: 1100px) {
+    @media (max-width: 1200px) {
       .featured-videos {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-          "top top"
-          "left center"
-          "right right";
-      }
-
-      .home-title-wrap {
-        margin-top: 90px;
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
     @media (max-width: 700px) {
       .home-stage {
-        padding: 44px 20px 70px;
+        padding: 40px 20px 70px;
       }
 
       .home-title-wrap {
-        margin-top: 40px;
-        margin-bottom: 28px;
+        margin-top: 0;
+        margin-bottom: 34px;
       }
 
       .featured-videos {
         grid-template-columns: 1fr;
-        grid-template-areas:
-          "top"
-          "left"
-          "center"
-          "right";
-        gap: 24px;
+        gap: 22px;
+      }
+
+      .video-title {
+        min-height: auto;
       }
     }
   </style>
@@ -152,28 +125,28 @@
   </header>
 
   <main class="home-stage">
+    <div class="home-title-wrap">
+      <h1>AMixingStandPoint</h1>
+      <p>Archiving REAL music since 2018.</p>
+    </div>
+
     <section class="featured-videos">
-      <a class="video-card video-slot-top" href="https://youtu.be/DUERP6SqjUk" target="_blank" rel="noopener noreferrer">
+      <a class="video-card" href="https://youtu.be/DUERP6SqjUk" target="_blank" rel="noopener noreferrer">
         <span class="video-title">Zebrahead live Minneapolis, MN, 1998.06.16</span>
         <img class="video-thumb" src="https://img.youtube.com/vi/DUERP6SqjUk/hqdefault.jpg" alt="Zebrahead live Minneapolis, MN, 1998.06.16 thumbnail" />
       </a>
 
-      <a class="video-card video-slot-left" href="https://youtu.be/dyY6sXWcqyo" target="_blank" rel="noopener noreferrer">
+      <a class="video-card" href="https://youtu.be/dyY6sXWcqyo" target="_blank" rel="noopener noreferrer">
         <span class="video-title">Smash Mouth - Live on Pay-Per-View | Astro Lounge Tour (3/3/2000)</span>
         <img class="video-thumb" src="https://img.youtube.com/vi/dyY6sXWcqyo/hqdefault.jpg" alt="Smash Mouth Live on Pay-Per-View Astro Lounge Tour thumbnail" />
       </a>
 
-      <div class="home-title-wrap video-slot-center">
-        <h1>AMixingStandPoint</h1>
-        <p>Archiving REAL music since 2018.</p>
-      </div>
-
-      <a class="video-card video-slot-right" href="https://youtu.be/sDsTthNbp5c" target="_blank" rel="noopener noreferrer">
+      <a class="video-card" href="https://youtu.be/sDsTthNbp5c" target="_blank" rel="noopener noreferrer">
         <span class="video-title">Stir - In Concert | Westwood One (2000-08-12)</span>
         <img class="video-thumb" src="https://img.youtube.com/vi/sDsTthNbp5c/hqdefault.jpg" alt="Stir In Concert Westwood One thumbnail" />
       </a>
 
-      <a class="video-card video-slot-center" href="https://youtu.be/EZpAkrSv56g" target="_blank" rel="noopener noreferrer" style="margin-top: 190px;">
+      <a class="video-card" href="https://youtu.be/EZpAkrSv56g" target="_blank" rel="noopener noreferrer">
         <span class="video-title">Boston - Live in Long Beach | King Biscuit Flower Hour (3/16/1977)</span>
         <img class="video-thumb" src="https://img.youtube.com/vi/EZpAkrSv56g/hqdefault.jpg" alt="Boston Live in Long Beach King Biscuit Flower Hour thumbnail" />
       </a>
