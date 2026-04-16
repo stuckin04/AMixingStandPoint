@@ -9,107 +9,101 @@
   <link rel="apple-touch-icon" href="logo.png" />
   <link rel="stylesheet" href="style.css" />
   <style>
-  .home-strip {
-    position: relative;
-    z-index: 2;
-    max-width: 1360px;
-    margin: 0 auto;
-    padding-top: 6px;
-  }
-
-  .home-title-wrap {
-    text-align: center;
-    margin-bottom: 42px;
-  }
-
-  .home-title-wrap h1 {
-    font-size: clamp(3.4rem, 7vw, 5.8rem);
-    line-height: 1;
-    margin-bottom: 12px;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
-  }
-
-  .home-title-wrap p {
-    font-size: 1.08rem;
-    color: #e6edff;
-    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
-  }
-
-  .featured-videos {
-    max-width: 1240px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
-    align-items: start;
-    justify-content: center;
-  }
-
-  .video-card {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    background: rgba(17, 28, 58, 0.34);
-    border: 1px solid rgba(116, 135, 255, 0.18);
-    border-radius: 22px;
-    padding: 18px;
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
-    backdrop-filter: blur(1px);
-    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
-    height: 100%;
-  }
-
-  .video-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
-    background: rgba(17, 28, 58, 0.46);
-  }
-
-  .video-title {
-    display: block;
-    font-size: 1rem;
-    font-weight: 700;
-    color: #f8fbff;
-    margin-bottom: 12px;
-    line-height: 1.32;
-    min-height: 58px;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
-  }
-
-  .video-thumb {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    border-radius: 16px;
-    display: block;
-  }
-
-  @media (max-width: 1200px) {
-    .featured-videos {
-      grid-template-columns: repeat(2, 1fr);
-      max-width: 820px;
-    }
-  }
-
-  @media (max-width: 700px) {
     .home-strip {
-      padding-top: 0;
+      position: relative;
+      z-index: 2;
+      max-width: 1360px;
+      margin: 0 auto;
+      padding-top: 6px;
     }
 
     .home-title-wrap {
-      margin-bottom: 30px;
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .home-title-wrap h1 {
+      font-size: clamp(3.4rem, 7vw, 5.8rem);
+      line-height: 1;
+      margin-bottom: 12px;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
     }
 
     .featured-videos {
-      grid-template-columns: 1fr;
-      max-width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
       gap: 22px;
+      align-items: start;
+      justify-content: center;
+    }
+
+    .video-card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: rgba(17, 28, 58, 0.34);
+      border: 1px solid rgba(116, 135, 255, 0.18);
+      border-radius: 22px;
+      padding: 18px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
+      backdrop-filter: blur(1px);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+      height: 100%;
+    }
+
+    .video-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+      background: rgba(17, 28, 58, 0.46);
     }
 
     .video-title {
-      min-height: auto;
+      display: block;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #f8fbff;
+      margin-bottom: 12px;
+      line-height: 1.32;
+      min-height: 58px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
     }
-  }
+
+    .video-thumb {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: 16px;
+      display: block;
+    }
+
+    @media (max-width: 1200px) {
+      .featured-videos {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 820px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .home-strip {
+        padding-top: 0;
+      }
+
+      .home-title-wrap {
+        margin-bottom: 30px;
+      }
+
+      .featured-videos {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        gap: 22px;
+      }
+
+      .video-title {
+        min-height: auto;
+      }
+    }
   </style>
 </head>
 <body>
@@ -122,16 +116,16 @@
         <a href="contributors.html">Contributors</a>
         <a href="albums.html">Favorites</a>
         <a href="about.html">Setup</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="contact-tab">Contact</a>
       </nav>
     </div>
   </header>
 
   <main class="page-main">
-  <div class="home-strip">
-    <div class="home-title-wrap">
-      <h1 class="home-tagline">Archiving REAL music since 2018.</h1>
-    </div>
+    <div class="home-strip">
+      <div class="home-title-wrap">
+        <h1 class="home-tagline">Archiving REAL music since 2018.</h1>
+      </div>
 
       <section class="featured-videos">
         <a class="video-card" href="https://youtu.be/DUERP6SqjUk" target="_blank" rel="noopener noreferrer">
@@ -196,5 +190,12 @@
       </section>
     </div>
   </main>
+
+  <footer class="site-footer">
+    <p>This site is not affiliated with or endorsed by any record labels, artists, bands, radio networks, or rights holders.</p>
+  </footer>
+    </main>
+</body>
+</html>
 </body>
 </html>

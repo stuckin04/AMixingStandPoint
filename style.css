@@ -55,6 +55,10 @@ a {
   text-underline-offset: 8px;
 }
 
+.top-tabs .contact-tab {
+  margin-left: auto;
+}
+
 .page-header {
   padding: 0;
   background-color: #3a3ea1;
@@ -70,9 +74,13 @@ a {
 
 .page-main {
   position: relative;
-  min-height: calc(100vh - 82px);
-  padding: 52px 20px 50px;
+  min-height: auto;
+  padding: 52px 20px 8px;
   overflow: visible;
+}
+
+.home-strip {
+  padding-bottom: 0;
 }
 
 .page-main::before {
@@ -401,6 +409,20 @@ a {
   text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
 }
 
+.site-footer {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 22px 20px 44px;
+  text-align: center;
+}
+
+.site-footer p {
+  font-size: 0.98rem;
+  color: rgba(248, 251, 255, 0.72);
+  line-height: 1.5;
+}
+
 @media (max-width: 700px) {
   .top-tabs {
     gap: 20px;
@@ -411,8 +433,12 @@ a {
     font-size: 1.02rem;
   }
 
+  .top-tabs .contact-tab {
+    margin-left: 0;
+  }
+
   .page-main {
-    padding: 28px 14px 30px;
+    padding: 28px 14px 14px;
     min-height: calc(100vh - 118px);
   }
 
@@ -462,5 +488,13 @@ a {
 
   .landing-center p {
     font-size: 1rem;
+  }
+
+  .site-footer {
+    padding: 10px 16px 22px;
+  }
+
+  .site-footer p {
+    font-size: 0.8rem;
   }
 }
