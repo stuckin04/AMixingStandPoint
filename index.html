@@ -41,24 +41,27 @@
     .home-intro h2 {
       font-size: 2rem;
       line-height: 1.2;
-      margin: 0 0 16px;
+      margin: 0 0 24px;
       color: #f8fbff;
     }
 
     .home-cta-row {
       display: flex;
-      justify-content: center;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin: 0;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      margin: 0 0 18px;
     }
 
     .home-cta-row a {
       display: inline-block;
+      width: 100%;
+      max-width: 340px;
       padding: 14px 24px;
       border-radius: 999px;
       font-weight: 700;
       font-size: 0.98rem;
+      text-align: center;
       transition: transform 0.2s ease, opacity 0.2s ease;
     }
 
@@ -78,6 +81,13 @@
       opacity: 0.95;
     }
 
+    .home-subtext {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: rgba(248, 251, 255, 0.82);
+      margin: 0;
+    }
+
     @media (max-width: 700px) {
       .home-strip {
         padding: 0 16px 44px;
@@ -94,6 +104,10 @@
       .home-intro h2 {
         font-size: 1.55rem;
       }
+
+      .home-cta-row a {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
@@ -101,12 +115,12 @@
   <header class="page-header">
     <div class="page-shell">
       <nav class="top-tabs">
-  <a href="index.html">Home</a>
-  <a href="contributors.html">Contributors</a>
-  <a href="have.html">Current Collection</a>
-  <a href="wants.html">Wants</a>
-  <a href="about.html">Setup</a>
-  <a href="contact.html" class="active contact-tab">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="contributors.html">Contributors</a>
+        <a href="have.html">Current Collection</a>
+        <a href="wants.html">Wants</a>
+        <a href="about.html">Setup</a>
+        <a href="contact.html" class="active contact-tab">Contact</a>
       </nav>
     </div>
   </header>
@@ -118,12 +132,17 @@
       </div>
 
       <section class="home-intro">
-        <h2>Preserving high quality radio source audio.</h2>
+        <h2>Links</h2>
 
         <div class="home-cta-row">
-          <a href="have.html" class="home-cta-primary">Browse Current Collection</a>
-          <a href="https://www.youtube.com/@amixingstandpoint" class="home-cta-secondary" target="_blank" rel="noopener noreferrer">Visit YouTube Archive</a>
+          <a href="have.html" class="home-cta-primary">Browse Collection</a>
+          <a href="https://www.youtube.com/@amixingstandpoint" class="home-cta-secondary" target="_blank" rel="noopener noreferrer">YouTube Channel</a>
+          <a href="https://archive.org/details/@amixingstandpoint/uploads" class="home-cta-secondary" target="_blank" rel="noopener noreferrer">Internet Archive</a>
+          <a href="https://www.guitars101.com/members/amixingstandpoint.249171/" class="home-cta-secondary" target="_blank" rel="noopener noreferrer">Guitars101 Forums</a>
+          <a href="https://www.facebook.com/amixingstandpoint/" class="home-cta-secondary" target="_blank" rel="noopener noreferrer">Facebook</a>
         </div>
+
+        <p class="home-subtext">Preserving rarities, demos, unreleased, live audio in high quality.</p>
       </section>
     </div>
   </main>
