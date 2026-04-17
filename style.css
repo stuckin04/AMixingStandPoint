@@ -219,8 +219,10 @@ a {
 
 .contact-center-page {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  min-height: calc(100vh - 160px);
+  padding: 96px 20px 40px;
 }
 
 .content-panel {
@@ -239,10 +241,24 @@ a {
   gap: 18px;
 }
 
+.contact-panel {
+  width: 100%;
+  max-width: 820px;
+  text-align: center;
+  padding: 48px 38px;
+}
+
 .content-panel h2 {
   color: #f8fbff;
   font-size: 2.7rem;
   margin-bottom: 16px;
+}
+
+.page-title {
+  margin: 0 0 16px;
+  font-size: 2.15rem;
+  line-height: 1.2;
+  color: #f8fbff;
 }
 
 .page-intro,
@@ -250,6 +266,14 @@ a {
   color: #dbe7ff;
   font-size: 1.12rem;
   line-height: 1.7;
+}
+
+.contact-panel .page-intro {
+  max-width: 620px;
+  margin: 0 auto 34px;
+  font-size: 1.12rem;
+  line-height: 1.75;
+  color: #e2ebff;
 }
 
 .privacy-panel .about-copy {
@@ -296,21 +320,48 @@ a {
   font-size: 1.02rem;
 }
 
-.link-card:hover {
-  background: rgba(47, 51, 138, 0.94);
-  transform: translateY(-2px);
-}
-
 .item-list.contact-only {
   display: flex;
   justify-content: center;
-  margin-top: 28px;
+  margin-top: 0;
 }
 
 .item-list.contact-only .item-card {
   width: 100%;
-  max-width: 420px;
+  max-width: 580px;
   text-align: center;
+  padding: 28px 30px;
+  display: block;
+  background: rgba(58, 62, 161, 0.9);
+  border: none;
+  border-radius: 12px;
+  color: #ffffff;
+}
+
+.contact-panel .item-title {
+  display: block;
+  font-size: 1.22rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.contact-panel .item-subtitle {
+  display: block;
+  font-size: 1.08rem;
+  line-height: 1.55;
+  word-break: break-word;
+  color: #ffffff;
+}
+
+.link-card {
+  transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+}
+
+.link-card:hover {
+  background: rgba(47, 51, 138, 0.97);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.24);
 }
 
 .contributors-panel {
@@ -489,6 +540,7 @@ a {
   .top-tabs a {
     font-size: 1.02rem;
   }
+
   .top-tabs .contact-tab {
     margin-left: 0;
   }
@@ -517,8 +569,25 @@ a {
     border-radius: 12px;
   }
 
+  .contact-center-page {
+    padding: 68px 16px 28px;
+  }
+
+  .contact-panel {
+    padding: 32px 20px;
+  }
+
   .content-panel h2 {
     font-size: 2rem;
+  }
+
+  .page-title {
+    font-size: 1.8rem;
+  }
+
+  .contact-panel .page-intro {
+    font-size: 1.02rem;
+    margin: 0 auto 28px;
   }
 
   .item-title {
@@ -527,6 +596,18 @@ a {
 
   .item-card {
     padding: 18px 18px;
+  }
+
+  .item-list.contact-only .item-card {
+    padding: 22px 18px;
+  }
+
+  .contact-panel .item-title {
+    font-size: 1.12rem;
+  }
+
+  .contact-panel .item-subtitle {
+    font-size: 1rem;
   }
 
   .contributors-grid {
