@@ -14,21 +14,137 @@
       z-index: 2;
       max-width: 1360px;
       margin: 0 auto;
-      padding-top: 6px;
+      padding: 6px 24px 70px;
     }
 
     .home-title-wrap {
       text-align: center;
-      margin-bottom: 42px;
+      margin-bottom: 34px;
+    }
+
+    .home-tagline {
+      margin: 0;
+    }
+
+    .home-intro {
+      max-width: 900px;
+      margin: 0 auto 32px;
+      text-align: center;
+      background: rgba(10, 18, 35, 0.72);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      padding: 34px 30px;
+      backdrop-filter: blur(4px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.24);
+    }
+
+    .home-intro h2 {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin-bottom: 18px;
+      color: #f8fbff;
+    }
+
+    .home-intro p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #d9e5ff;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .home-cta-row {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin: 26px 0 8px;
+    }
+
+    .home-cta-row a {
+      display: inline-block;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.98rem;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .home-cta-primary {
+      background: #f8fbff;
+      color: #13203d;
+    }
+
+    .home-cta-secondary {
+      background: rgba(255, 255, 255, 0.1);
+      color: #f8fbff;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .home-cta-row a:hover {
+      transform: translateY(-2px);
+      opacity: 0.95;
+    }
+
+    .home-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 28px;
+      max-width: 980px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .home-card {
+      background: rgba(9, 16, 30, 0.76);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      padding: 26px 24px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    .home-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 14px;
+      color: #f8fbff;
+    }
+
+    .home-card p {
+      color: #d7e6ff;
+      line-height: 1.75;
+      font-size: 0.98rem;
+    }
+
+    @media (max-width: 980px) {
+      .home-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 700px) {
       .home-strip {
-        padding-top: 0;
+        padding: 0 16px 44px;
       }
 
       .home-title-wrap {
-        margin-bottom: 30px;
+        margin-bottom: 24px;
+      }
+
+      .home-intro {
+        padding: 26px 18px;
+      }
+
+      .home-intro h2 {
+        font-size: 1.55rem;
+      }
+
+      .home-intro p {
+        font-size: 0.98rem;
+      }
+
+      .home-card {
+        padding: 22px 18px;
       }
     }
   </style>
@@ -52,6 +168,34 @@
       <div class="home-title-wrap">
         <h1 class="home-tagline">Archiving REAL music since 2018.</h1>
       </div>
+
+      <section class="home-intro">
+        <h2>Preserving high quality radio source audio.</h2>
+        <p>
+          This archive focuses on recordings that were distributed for broadcast use and preserved in the highest quality possible. Instead of the fuzzy, compressed, and degraded sound most listeners associate with radio, the goal here is to present material closer to its original source with more clarity, detail, and presence intact.
+        </p>
+
+        <div class="home-cta-row">
+          <a href="have.html" class="home-cta-primary">Browse Current Collection</a>
+          <a href="https://www.youtube.com/@amixingstandpoint" class="home-cta-secondary" target="_blank" rel="noopener noreferrer">Visit YouTube Archive</a>
+        </div>
+      </section>
+
+      <section class="home-grid">
+        <div class="home-card">
+          <h3>What You Will Find</h3>
+          <p>
+            Live broadcasts, rare discs, unreleased material, source audio, alternate versions, and recordings that were meant to be heard with more quality than the average over the air capture ever preserved.
+          </p>
+        </div>
+
+        <div class="home-card">
+          <h3>Archive Standard</h3>
+          <p>
+            The focus is simple: better source quality, cleaner presentation, and preservation first. Every upload aims to reflect the material as closely as possible to how it existed before the usual signal loss and broadcast chain got in the way.
+          </p>
+        </div>
+      </section>
     </div>
   </main>
 
