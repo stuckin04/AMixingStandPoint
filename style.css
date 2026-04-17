@@ -252,6 +252,16 @@ a {
   line-height: 1.7;
 }
 
+.privacy-panel .about-copy {
+  color: #ffffff;
+  font-size: 1.17rem;
+}
+
+.privacy-panel .inline-link {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 .about-copy + .about-copy {
   margin-top: 14px;
 }
@@ -462,6 +472,14 @@ a {
   line-height: 1.5;
 }
 
+.site-footer a {
+  color: #ffffff;
+}
+
+.site-footer a:hover {
+  opacity: 0.82;
+}
+
 @media (max-width: 700px) {
   .top-tabs {
     gap: 20px;
@@ -471,7 +489,6 @@ a {
   .top-tabs a {
     font-size: 1.02rem;
   }
-
   .top-tabs .contact-tab {
     margin-left: 0;
   }
