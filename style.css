@@ -300,6 +300,23 @@ a {
   text-align: center;
 }
 
+.contributors-panel {
+  max-width: 980px;
+}
+
+.contributors-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+  align-items: stretch;
+}
+
+.contributors-grid .item-card {
+  width: 100%;
+  margin: 0;
+}
+
 .dropdown-card {
   width: 100%;
 }
@@ -490,6 +507,10 @@ a {
 
   .item-card {
     padding: 18px 18px;
+  }
+
+  .contributors-grid {
+    grid-template-columns: 1fr;
   }
 
   .dropdown-toggle {
