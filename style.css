@@ -107,7 +107,7 @@ a {
   inset: 0;
   background-image: url("RadioSunset.png");
   background-size: cover;
-  background-position: 62% center;
+  background-position: 66% center;
   background-repeat: no-repeat;
   opacity: 0.38;
   filter: saturate(0.95) brightness(0.72);
@@ -133,7 +133,7 @@ a {
   height: calc(100vh - 82px);
   background-image: url("RadioSunset.png");
   background-size: cover;
-  background-position: 62% center;
+  background-position: 66% center;
   background-repeat: no-repeat;
   opacity: 0.34;
   filter: saturate(0.82) brightness(0.62);
@@ -164,7 +164,7 @@ a {
   height: calc(100vh - 82px);
   background-image: url("RadioSunset.png");
   background-size: cover;
-  background-position: 62% center;
+  background-position: 66% center;
   background-repeat: no-repeat;
   opacity: 0.34;
   filter: saturate(0.9) brightness(0.55);
@@ -195,7 +195,7 @@ a {
   height: calc(100vh - 82px);
   background-image: url("RadioSunset.png");
   background-size: cover;
-  background-position: 62% center;
+  background-position: 66% center;
   background-repeat: no-repeat;
   opacity: 0.34;
   filter: saturate(0.95) brightness(0.55);
@@ -472,7 +472,7 @@ a {
   inset: 0;
   background-image: url("RadioSunset.png");
   background-size: cover;
-  background-position: 62% center;
+  background-position: 66% center;
   background-repeat: no-repeat;
   opacity: 0.38;
   filter: saturate(0.95) brightness(0.72);
