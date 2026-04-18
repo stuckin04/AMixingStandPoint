@@ -370,6 +370,14 @@ a {
 
 .contributors-panel {
   max-width: 980px;
+  text-align: center;
+}
+
+.contributors-panel h2,
+.contributors-panel .page-intro,
+.contributors-grid .item-card,
+.contributors-grid .item-title {
+  text-align: center;
 }
 
 .contributors-grid {
