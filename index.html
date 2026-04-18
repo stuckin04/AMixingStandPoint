@@ -92,6 +92,30 @@
       margin: 0;
     }
 
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-inner p {
+      margin: 0;
+    }
+
+    .background-credit {
+      max-width: 900px;
+      font-size: 0.88rem;
+      line-height: 1.5;
+      color: rgba(248, 251, 255, 0.72);
+      text-align: center;
+    }
+
+    .background-credit a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
     @media (max-width: 700px) {
       .home-strip {
         padding: 0 16px 44px;
@@ -111,6 +135,10 @@
 
       .home-cta-row a {
         max-width: 100%;
+      }
+
+      .background-credit {
+        font-size: 0.82rem;
       }
     }
   </style>
@@ -154,7 +182,14 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <p>This site is not affiliated with or endorsed by any record labels, artists, bands, radio networks, or rights holders.</p>
-      <a href="privacy.html">Privacy Policy</a>
+      <p><a href="privacy.html">Privacy Policy</a></p>
+      <p class="background-credit">
+        Background image:
+        <a href="https://www.deviantart.com/mclelun/art/Radio-Tower-342305525" target="_blank" rel="noopener noreferrer">"Radio Tower" by McLelun</a>,
+        used under
+        <a href="https://creativecommons.org/licenses/by-nc/3.0/" target="_blank" rel="noopener noreferrer">CC BY-NC 3.0</a>.
+        Modified for website background.
+      </p>
     </div>
   </footer>
 </body>
