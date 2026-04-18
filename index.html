@@ -96,49 +96,30 @@
       width: 100%;
       max-width: 1360px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr auto;
+      display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 24px;
+      justify-content: center;
+      gap: 10px;
       padding: 0 24px;
+      text-align: center;
     }
 
-    .footer-left,
-    .footer-center {
+    .footer-note,
+    .footer-link {
       font-size: 0.88rem;
       line-height: 1.5;
       color: rgba(248, 251, 255, 0.74);
     }
 
-    .footer-left {
-      text-align: left;
-    }
-
-    .footer-center {
-      text-align: right;
-      white-space: nowrap;
-    }
-
-    .footer-inner p {
+    .footer-note p,
+    .footer-link p {
       margin: 0;
     }
 
-    .footer-center a {
+    .footer-link a {
       color: #ffffff;
       text-decoration: underline;
-    }
-
-    @media (max-width: 900px) {
-      .footer-inner {
-        grid-template-columns: 1fr;
-        gap: 10px;
-        text-align: center;
-      }
-
-      .footer-left,
-      .footer-center {
-        text-align: center;
-      }
     }
 
     @media (max-width: 700px) {
@@ -162,8 +143,8 @@
         max-width: 100%;
       }
 
-      .footer-left,
-      .footer-center {
+      .footer-note,
+      .footer-link {
         font-size: 0.82rem;
       }
     }
@@ -207,11 +188,10 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <div class="footer-left">
+      <div class="footer-note">
         <p>This site is not affiliated with or endorsed by any record labels, artists, bands, radio networks, or rights holders.</p>
       </div>
-
-      <div class="footer-center">
+      <div class="footer-link">
         <p><a href="privacy.html">Privacy Policy</a></p>
       </div>
     </div>
