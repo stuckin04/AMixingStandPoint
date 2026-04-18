@@ -105,9 +105,9 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("RadioNight.png");
+  background-image: url("RadioSunset.png");
   background-size: cover;
-  background-position: center;
+  background-position: 62% center;
   background-repeat: no-repeat;
   opacity: 0.38;
   filter: saturate(0.95) brightness(0.72);
@@ -131,9 +131,9 @@ a {
   left: 0;
   width: 100%;
   height: calc(100vh - 82px);
-  background-image: url("RadioNight.png");
+  background-image: url("RadioSunset.png");
   background-size: cover;
-  background-position: center;
+  background-position: 62% center;
   background-repeat: no-repeat;
   opacity: 0.34;
   filter: saturate(0.82) brightness(0.62);
@@ -162,9 +162,9 @@ a {
   left: 0;
   width: 100%;
   height: calc(100vh - 82px);
-  background-image: url("RadioNight.png");
+  background-image: url("RadioSunset.png");
   background-size: cover;
-  background-position: center;
+  background-position: 62% center;
   background-repeat: no-repeat;
   opacity: 0.34;
   filter: saturate(0.9) brightness(0.55);
@@ -193,9 +193,9 @@ a {
   left: 0;
   width: 100%;
   height: calc(100vh - 82px);
-  background-image: url("RadioNight.png");
+  background-image: url("RadioSunset.png");
   background-size: cover;
-  background-position: center;
+  background-position: 62% center;
   background-repeat: no-repeat;
   opacity: 0.34;
   filter: saturate(0.95) brightness(0.55);
@@ -470,9 +470,9 @@ a {
 .landing-bg {
   position: absolute;
   inset: 0;
-  background-image: url("RadioNight.png");
+  background-image: url("RadioSunset.png");
   background-size: cover;
-  background-position: center;
+  background-position: 62% center;
   background-repeat: no-repeat;
   opacity: 0.38;
   filter: saturate(0.95) brightness(0.72);

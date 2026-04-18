@@ -93,27 +93,52 @@
     }
 
     .footer-inner {
-      display: flex;
-      flex-direction: column;
+      width: 100%;
+      max-width: 1360px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto;
       align-items: center;
-      gap: 10px;
+      gap: 24px;
+      padding: 0 24px;
+    }
+
+    .footer-left,
+    .footer-center {
+      font-size: 0.88rem;
+      line-height: 1.5;
+      color: rgba(248, 251, 255, 0.74);
+    }
+
+    .footer-left {
+      text-align: left;
+    }
+
+    .footer-center {
+      text-align: right;
+      white-space: nowrap;
     }
 
     .footer-inner p {
       margin: 0;
     }
 
-    .background-credit {
-      max-width: 900px;
-      font-size: 0.88rem;
-      line-height: 1.5;
-      color: rgba(248, 251, 255, 0.72);
-      text-align: center;
-    }
-
-    .background-credit a {
+    .footer-center a {
       color: #ffffff;
       text-decoration: underline;
+    }
+
+    @media (max-width: 900px) {
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        text-align: center;
+      }
+
+      .footer-left,
+      .footer-center {
+        text-align: center;
+      }
     }
 
     @media (max-width: 700px) {
@@ -137,7 +162,8 @@
         max-width: 100%;
       }
 
-      .background-credit {
+      .footer-left,
+      .footer-center {
         font-size: 0.82rem;
       }
     }
@@ -181,15 +207,13 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <p>This site is not affiliated with or endorsed by any record labels, artists, bands, radio networks, or rights holders.</p>
-      <p><a href="privacy.html">Privacy Policy</a></p>
-      <p class="background-credit">
-        Background image:
-        <a href="https://www.deviantart.com/mclelun/art/Radio-Tower-342305525" target="_blank" rel="noopener noreferrer">"Radio Tower" by McLelun</a>,
-        used under
-        <a href="https://creativecommons.org/licenses/by-nc/3.0/" target="_blank" rel="noopener noreferrer">CC BY-NC 3.0</a>.
-        Modified for website background.
-      </p>
+      <div class="footer-left">
+        <p>This site is not affiliated with or endorsed by any record labels, artists, bands, radio networks, or rights holders.</p>
+      </div>
+
+      <div class="footer-center">
+        <p><a href="privacy.html">Privacy Policy</a></p>
+      </div>
     </div>
   </footer>
 </body>
