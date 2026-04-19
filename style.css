@@ -218,14 +218,6 @@ a {
   pointer-events: none;
 }
 
-.contact-center-page {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  min-height: calc(100vh - 160px);
-  padding: 72px 20px 32px;
-}
-
 .content-panel {
   position: relative;
   z-index: 2;
@@ -242,11 +234,24 @@ a {
   gap: 12px;
 }
 
+.contact-center-page {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: calc(100vh - 160px);
+  padding: 72px 20px 32px;
+}
+
 .contact-panel {
   width: 100%;
   max-width: 820px;
   text-align: center;
   padding: 40px 32px;
+}
+
+.contributors-panel {
+  max-width: 980px;
+  text-align: center;
 }
 
 .content-panel h2 {
@@ -278,7 +283,8 @@ a {
   color: #e2ebff;
 }
 
-.privacy-panel .about-copy {
+.privacy-panel .about-copy,
+.fairuse-panel .about-copy {
   color: #ffffff;
   font-size: 1.17rem;
 }
@@ -368,11 +374,6 @@ a {
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.24);
 }
 
-.contributors-panel {
-  max-width: 980px;
-  text-align: center;
-}
-
 .contributors-panel h2,
 .contributors-panel .page-intro,
 .contributors-grid .item-card,
@@ -395,6 +396,10 @@ a {
 
 .dropdown-card {
   width: 100%;
+}
+
+.dropdown-card + .dropdown-card {
+  margin-top: 18px;
 }
 
 .dropdown-toggle {
@@ -484,63 +489,6 @@ a {
   box-shadow: 0 0 0 1px rgba(219, 231, 255, 0.08);
 }
 
-.landing-page {
-  background: #111827;
-}
-
-.landing-hero {
-  position: relative;
-  min-height: calc(100vh - 82px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.landing-bg {
-  position: absolute;
-  inset: 0;
-  background-image: url("RadioSunset.png");
-  background-size: cover;
-  background-position: 66% center;
-  background-repeat: no-repeat;
-  opacity: 0.38;
-  filter: saturate(0.95) brightness(0.72);
-}
-
-.landing-shade {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(to bottom, rgba(17, 24, 39, 0.45), rgba(17, 24, 39, 0.72)),
-    radial-gradient(circle at center, rgba(255, 215, 130, 0.08), transparent 55%);
-}
-
-.landing-center {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.landing-center h1 {
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.92);
-  letter-spacing: 1px;
-  text-shadow: 0 4px 28px rgba(0, 0, 0, 0.45);
-  margin-bottom: 14px;
-}
-
-.landing-center p {
-  font-size: 1.15rem;
-  color: rgba(235, 242, 255, 0.82);
-  max-width: 760px;
-  margin: 0 auto;
-  line-height: 1.7;
-  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
-}
-
 .site-footer {
   position: relative;
   z-index: 2;
@@ -563,23 +511,6 @@ a {
   text-align: center;
 }
 
-.footer-note,
-.footer-link {
-  font-size: 0.88rem;
-  line-height: 1.5;
-  color: rgba(248, 251, 255, 0.74);
-}
-
-.footer-note p,
-.footer-link p {
-  margin: 0;
-}
-
-.footer-link a {
-  color: #ffffff;
-  text-decoration: underline;
-}
-
 .site-footer p {
   font-size: 0.98rem;
   color: rgba(248, 251, 255, 0.72);
@@ -593,6 +524,36 @@ a {
 
 .site-footer a:hover {
   opacity: 0.82;
+}
+
+.footer-policy-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.footer-divider {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.fairuse-panel {
+  max-width: 980px;
+  text-align: center;
+  align-items: center;
+}
+
+.fairuse-panel h2 {
+  width: 100%;
+  text-align: center;
+}
+
+.fairuse-panel .about-copy {
+  width: 100%;
+  max-width: 860px;
+  text-align: center;
+  line-height: 1.8;
 }
 
 @media (max-width: 700px) {
@@ -698,23 +659,6 @@ a {
     font-size: 1rem;
   }
 
-  .landing-hero {
-    min-height: calc(100vh - 118px);
-  }
-
-  .landing-center h1 {
-    font-size: clamp(2.4rem, 10vw, 4rem);
-  }
-
-  .landing-center p {
-    font-size: 1rem;
-  }
-
-  .footer-note,
-  .footer-link {
-    font-size: 0.82rem;
-  }
-
   .site-footer {
     padding: 10px 16px 22px;
   }
@@ -725,5 +669,14 @@ a {
 
   .footer-inner {
     padding: 0 16px;
+  }
+
+  .footer-policy-links {
+    gap: 10px;
+  }
+
+  .fairuse-panel .about-copy {
+    font-size: 1.02rem;
+    line-height: 1.75;
   }
 }
