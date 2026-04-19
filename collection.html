@@ -155,21 +155,6 @@
       </div>
 
       <div class="dropdown-card">
-        <button class="dropdown-toggle" type="button" id="bigTimeRushToggle" aria-expanded="false" aria-controls="bigTimeRushList">
-          <span>Big Time Rush</span>
-          <span class="dropdown-arrow">+</span>
-        </button>
-
-        <div class="dropdown-content" id="bigTimeRushList">
-          <div class="dropdown-inner">
-            <ul class="archive-list">
-              <li><a href="https://archive.org/details/paralyzedbigtimerush" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: inherit;">Paralyzed Original Version</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="dropdown-card">
         <button class="dropdown-toggle" type="button" id="lpRipsToggle" aria-expanded="false" aria-controls="lpRipsList">
           <span>LP Rips</span>
           <span class="dropdown-arrow">+</span>
@@ -185,14 +170,24 @@
               <li><a href="https://archive.org/details/CaliforniaCollectorsSeriesVolumeFive" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: inherit;">The Beach Boys - California Collector's Series Volume Five "Live &amp; Unreleased" (Unofficial Release) [4 Tracks]</a></li>
             </ul>
 
-            <ul class="archive-list" style="margin-top: 18px;">
-              <li><strong>Various Artists</strong></li>
-              <li><a href="https://archive.org/details/TheBestOfHardRockLive2000" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: inherit;">KLBJ FM's Local Licks Live '98</a></li>
-              <li><a href="https://archive.org/details/TheBestOfHardRockLive2000" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: inherit;">The Best of Hard Rock Live</a></li>
-              <li><a href="https://drive.proton.me/urls/VSY9TKGEMC#Ax8X5nOlDeF4" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: inherit;">Jingle Ball '98</a></li>
-              <li><a href="https://archive.org/details/Z100JingleBall1999" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: inherit;">Z100's Jingle Ball '99 All Access Live!</a></li>
-              <li><a href="https://archive.org/details/LaunchSeasonsGreetings1999" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: inherit;">Seasons Greetings 1999</a></li>
-            </ul>
+            <div class="dropdown-card nested-dropdown-card" style="margin-top: 18px;">
+              <button class="dropdown-toggle nested-dropdown-toggle" type="button" id="variousArtistsToggle" aria-expanded="false" aria-controls="variousArtistsList">
+                <span>Various Artists</span>
+                <span class="dropdown-arrow">+</span>
+              </button>
+
+              <div class="dropdown-content nested-dropdown-content" id="variousArtistsList">
+                <div class="dropdown-inner">
+                  <ul class="archive-list">
+                    <li><a href="https://archive.org/details/TheBestOfHardRockLive2000" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: inherit;">KLBJ FM's Local Licks Live '98</a></li>
+                    <li><a href="https://archive.org/details/TheBestOfHardRockLive2000" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: inherit;">The Best of Hard Rock Live</a></li>
+                    <li><a href="https://drive.proton.me/urls/VSY9TKGEMC#Ax8X5nOlDeF4" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: inherit;">Jingle Ball '98</a></li>
+                    <li><a href="https://archive.org/details/Z100JingleBall1999" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: inherit;">Z100's Jingle Ball '99 All Access Live!</a></li>
+                    <li><a href="https://archive.org/details/LaunchSeasonsGreetings1999" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: inherit;">Seasons Greetings 1999</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -250,8 +245,8 @@
     setupDropdown("globalToggle", "globalList");
     setupDropdown("zebraheadToggle", "zebraheadList");
     setupDropdown("reelBigFishToggle", "reelBigFishList");
-    setupDropdown("bigTimeRushToggle", "bigTimeRushList");
     setupDropdown("lpRipsToggle", "lpRipsList");
+    setupDropdown("variousArtistsToggle", "variousArtistsList");
   </script>
 </body>
 </html>
